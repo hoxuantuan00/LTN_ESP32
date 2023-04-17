@@ -2326,3 +2326,12 @@
 47	101	7029334186130683	bootloader/bootloader.bin	a7e43a4aab407ac4
 47	101	7029334186130683	bootloader/bootloader.map	a7e43a4aab407ac4
 102	7479	0	CMakeFiles/flash	42de7d205b6114f8
+49	166	7029334186130683	bootloader-prefix/src/bootloader-stamp/bootloader-build	a7e43a4aab407ac4
+49	166	7029334186130683	bootloader/bootloader.elf	a7e43a4aab407ac4
+49	166	7029334186130683	bootloader/bootloader.bin	a7e43a4aab407ac4
+49	166	7029334186130683	bootloader/bootloader.map	a7e43a4aab407ac4
+57	2893	7034641594407417	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	c5c4ed2fa0438be0
+2893	3035	7034641596005385	esp-idf/main/libmain.a	cd6651c3dc702ca5
+3036	6682	7034641632172466	esp-idf/esp32/ld/esp32.project.ld	2112c1b64c3ce37b
+6682	8274	7034641648216211	SAMPLE_PROJECT.elf	c9466c9e6b18229d
+8274	8587	7034641651526399	.bin_timestamp	44b0c023acf88ac1

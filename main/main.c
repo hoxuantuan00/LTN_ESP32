@@ -1,4 +1,4 @@
-
+// add cac thu vien
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -11,12 +11,14 @@
 #include "HD44780.h"
 #include <driver/i2c.h>
 
+// dinh nghia cac chan lcd
 #define LCD_ADDR 0x27
 #define SDA_PIN 21
 #define SCL_PIN 22
 #define LCD_COLS 16
 #define LCD_ROWS 2
 
+//dinh nghia cac chan in out
 #define ESP_INR_FLAG_DEFAULT 0
 #define LED_PIN_1 23
 #define LED_PIN_2 27
@@ -32,24 +34,34 @@ TaskHandle_t ISR_2 = NULL;
 TaskHandle_t ISR_3 = NULL;
 TaskHandle_t ISR_4 = NULL;
 
+// ham ngat khi pin 15 nhan
+
 void IRAM_ATTR button_isr_handler_1(void *arg)
 {
     xTaskResumeFromISR(ISR_1);
 }
+
+// ham ngat khi pin 14 nhan
+
 void IRAM_ATTR button_isr_handler_2(void *arg)
 {
     xTaskResumeFromISR(ISR_2);
 }
+
+// ham ngat khi pin 17 nhan
+
 void IRAM_ATTR button_isr_handler_3(void *arg)
 {
     xTaskResumeFromISR(ISR_3);
 }
+// ham ngat khi pin sensor 18 nhan
+
 void IRAM_ATTR button_isr_handler_4(void *arg)
 {
     xTaskResumeFromISR(ISR_4);
 }
 
-
+// task 1 thuc hien khi ngat tren pin 15
 void interrupt_task_1(void *arg)
 {
     bool led_status = false;
@@ -62,6 +74,8 @@ void interrupt_task_1(void *arg)
         printf("Button pressed_task1!\n");
     }
 }
+
+// task 2 thuc hien khi ngat tren pin 14
 
 void interrupt_task_2(void *arg)
 {
@@ -76,6 +90,8 @@ void interrupt_task_2(void *arg)
     }
 }
 
+// task 3 thuc hien khi ngat tren pin 17
+
 void interrupt_task_3(void *arg)
 {
     bool led_status = false;
@@ -89,6 +105,8 @@ vTaskDelay(200 / portTICK_PERIOD_MS);
     }
 }
 
+// task 4 thuc hien khi ngat tren pin sensor 18
+
 void interrupt_task_4(void *arg)
 {
     bool speaker_status ;
@@ -97,11 +115,12 @@ void interrupt_task_4(void *arg)
         vTaskSuspend(NULL);
          speaker_status = true;
         gpio_set_level(speaker_PIN, speaker_status);
-        vTaskDelay(3000 / portTICK_RATE_MS);
+        vTaskDelay(5000 / portTICK_RATE_MS);
        speaker_status= !speaker_status;
          gpio_set_level(speaker_PIN, speaker_status);
     } 
 }
+// ham read dht11
 
 void DHT_reader_task(void *pvParameter)
 {
@@ -120,6 +139,8 @@ void DHT_reader_task(void *pvParameter)
         vTaskDelay(5000 / portTICK_RATE_MS);
     }
 }
+
+// hien thi lcd
 
 void LCD_DemoTask(void *param)
 {
@@ -141,36 +162,19 @@ void LCD_DemoTask(void *param)
 
 void set_up()
 {
-    gpio_pad_select_gpio(PUSH_BUTTON_PIN_1|PUSH_BUTTON_PIN_2|PUSH_BUTTON_PIN_3);
-   // gpio_pad_select_gpio(PUSH_BUTTON_PIN_2);
-    //gpio_pad_select_gpio(PUSH_BUTTON_PIN_3);
-    gpio_pad_select_gpio(pin_sensor);
-    gpio_pad_select_gpio(LED_PIN_1);
-    gpio_pad_select_gpio(LED_PIN_2);
-    gpio_pad_select_gpio(LED_PIN_3);
-    gpio_pad_select_gpio(speaker_PIN);
-
-    gpio_set_direction(PUSH_BUTTON_PIN_1, GPIO_MODE_INPUT);
-    gpio_set_direction(PUSH_BUTTON_PIN_2, GPIO_MODE_INPUT);
-    gpio_set_direction(PUSH_BUTTON_PIN_3, GPIO_MODE_INPUT);
-    gpio_set_direction(pin_sensor, GPIO_MODE_INPUT);
-    gpio_set_direction(LED_PIN_1, GPIO_MODE_OUTPUT);
-    gpio_set_direction(LED_PIN_2, GPIO_MODE_OUTPUT);
-    gpio_set_direction(LED_PIN_3, GPIO_MODE_OUTPUT);
-    gpio_set_direction(speaker_PIN, GPIO_MODE_OUTPUT);
-
-    gpio_set_intr_type(PUSH_BUTTON_PIN_1, GPIO_INTR_POSEDGE);
-    gpio_set_pull_mode(PUSH_BUTTON_PIN_1, GPIO_PULLDOWN_ONLY);
-
-    gpio_set_intr_type(PUSH_BUTTON_PIN_2, GPIO_INTR_POSEDGE);
-    gpio_set_pull_mode(PUSH_BUTTON_PIN_2, GPIO_PULLDOWN_ONLY);
-
-    gpio_set_intr_type(PUSH_BUTTON_PIN_3, GPIO_INTR_POSEDGE);
-    gpio_set_pull_mode(PUSH_BUTTON_PIN_3, GPIO_PULLDOWN_ONLY);
-
+    // set up chan gpio
+    gpio_pad_select_gpio(PUSH_BUTTON_PIN_1|PUSH_BUTTON_PIN_2|PUSH_BUTTON_PIN_3|pin_sensor);
+    gpio_pad_select_gpio(LED_PIN_1|LED_PIN_2|LED_PIN_3|speaker_PIN);
+   // set in out
+    gpio_set_direction(PUSH_BUTTON_PIN_1|PUSH_BUTTON_PIN_2|PUSH_BUTTON_PIN_3|pin_sensor, GPIO_MODE_INPUT);
+    gpio_set_direction(LED_PIN_1|LED_PIN_2|LED_PIN_3|speaker_PIN, GPIO_MODE_OUTPUT);
+    // set ngat cạnh lên và mode kéo xuống trên button
+    gpio_set_intr_type(PUSH_BUTTON_PIN_1|PUSH_BUTTON_PIN_2|PUSH_BUTTON_PIN_3, GPIO_INTR_POSEDGE);
+    gpio_set_pull_mode(PUSH_BUTTON_PIN_1|PUSH_BUTTON_PIN_2|PUSH_BUTTON_PIN_3, GPIO_PULLDOWN_ONLY);
+// set ngắt cạnh xuống và mode kéo lên trên sensor SR602
     gpio_set_intr_type(pin_sensor, GPIO_INTR_NEGEDGE);
     gpio_set_pull_mode(pin_sensor, GPIO_PULLUP_ONLY);
-
+// tạo cac ham ngắt tương ứng với các chân
     gpio_install_isr_service(ESP_INR_FLAG_DEFAULT);
     gpio_isr_handler_add(PUSH_BUTTON_PIN_1, button_isr_handler_1, NULL);
     gpio_isr_handler_add(PUSH_BUTTON_PIN_2, button_isr_handler_2, NULL);
@@ -182,6 +186,7 @@ void set_up()
 void app_main()
 {
     set_up();
+    // tạo các task
     xTaskCreate(&DHT_reader_task, "DHT_reader_task", 2048, NULL, 10, NULL);
     xTaskCreate(interrupt_task_1, "interrupt_task_1", 4096, NULL, 12, &ISR_1);
     xTaskCreate(interrupt_task_2, "interrupt_task_2", 4096, NULL, 10, &ISR_2);

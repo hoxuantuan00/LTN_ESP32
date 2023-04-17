@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Espressif/**",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/freertos/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/driver/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/esp_common/include",
+                "${workspaceFolder}/components/DHT11/include",
+                "D:/Espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include",
+                "${workspaceFolder}/components/HD44780/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/esp_ringbuf/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/esp_http_server/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/esp32/include",
+                "D:/Espressif/frameworks/esp-idf-v4.3.5/components/esp_netif/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86"
+        }
+    ],
+    "version": 4
+}

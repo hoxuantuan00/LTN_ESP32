@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "dht11.h": "c",
+        "nvs_flash.h": "c",
+        "task.h": "c",
+        "esp_system.h": "c",
+        "ets_sys.h": "c",
+        "esp_types.h": "c",
+        "soc_caps.h": "c",
+        "gpio_types.h": "c",
+        "gpio_periph.h": "c",
+        "esp_log.h": "c",
+        "esp_http_server.h": "c",
+        "esp_wifi.h": "c"
+    }
+}

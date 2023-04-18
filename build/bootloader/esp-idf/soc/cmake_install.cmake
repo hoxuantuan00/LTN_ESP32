@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32/cmake_install.cmake")
+  include("D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32c3/cmake_install.cmake")
 
 endif()
 

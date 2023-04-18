@@ -15,10 +15,10 @@ D:/Espressif/examples/example_of_me/sample_project/build/bootloader/CMakeFiles/e
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/CMakeFiles/rebuild_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/xtensa/CMakeFiles/edit_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/xtensa/CMakeFiles/rebuild_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp32/CMakeFiles/edit_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp32/CMakeFiles/rebuild_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/riscv/CMakeFiles/edit_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/riscv/CMakeFiles/rebuild_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp32c3/CMakeFiles/edit_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp32c3/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/newlib/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/newlib/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir
@@ -27,8 +27,8 @@ D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/hal/
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/CMakeFiles/rebuild_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32/CMakeFiles/edit_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32/CMakeFiles/rebuild_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32c3/CMakeFiles/edit_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/soc/esp32c3/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/micro-ecc/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/micro-ecc/CMakeFiles/rebuild_cache.dir
@@ -48,8 +48,8 @@ D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/efus
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/rebuild_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/port/esp32/CMakeFiles/edit_cache.dir
-D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/port/esp32/CMakeFiles/rebuild_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/port/esp32c3/CMakeFiles/edit_cache.dir
+D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_hw_support/port/esp32c3/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_common/CMakeFiles/rebuild_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_common/CMakeFiles/edit_cache.dir
 D:/Espressif/examples/example_of_me/sample_project/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir

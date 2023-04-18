@@ -25,10 +25,9 @@ D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/soc/libsoc.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp_hw_support/libesp_hw_support.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/driver/libdriver.a
-D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/xtensa/libxtensa.a
+D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/riscv/libriscv.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/espcoredump/libespcoredump.a
-D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/perfmon/libperfmon.a
-D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp32/libesp32.a
+D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp32c3/libesp32c3.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp_common/libesp_common.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/esp_timer/libesp_timer.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/freertos/libfreertos.a
@@ -66,7 +65,6 @@ D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/libsodium/libli
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/mqtt/libmqtt.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/openssl/libopenssl.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/spiffs/libspiffs.a
-D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/ulp/libulp.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/DHT11/libDHT11.a
 D:/Espressif/examples/example_of_me/sample_project/build/esp-idf/HD44780/libHD44780.a

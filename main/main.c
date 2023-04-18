@@ -332,17 +332,17 @@ void set_up()
      gpio_set_direction(LED_PIN_2, GPIO_MODE_OUTPUT);
       gpio_set_direction(LED_PIN_3, GPIO_MODE_OUTPUT);
        gpio_set_direction(speaker_PIN, GPIO_MODE_OUTPUT);
-    // set ngat cáº¡nh lÃªn vÃ  mode kÃ©o xuá»‘ng trÃªn button
+    // set ngat nut nhan, mode kéo xuong tren button
     gpio_set_intr_type(PUSH_BUTTON_PIN_1, GPIO_INTR_POSEDGE);
     gpio_set_pull_mode(PUSH_BUTTON_PIN_1, GPIO_PULLDOWN_ONLY);
     gpio_set_intr_type(PUSH_BUTTON_PIN_2 ,GPIO_INTR_POSEDGE);
     gpio_set_pull_mode(PUSH_BUTTON_PIN_2, GPIO_PULLDOWN_ONLY);
     gpio_set_intr_type(PUSH_BUTTON_PIN_3 ,GPIO_INTR_POSEDGE);
     gpio_set_pull_mode(PUSH_BUTTON_PIN_3, GPIO_PULLDOWN_ONLY);
-// set ngáº¯t cáº¡nh xuá»‘ng vÃ  mode kÃ©o lÃªn trÃªn sensor SR602
+// set ngat, mode keo len sensor SR602
     gpio_set_intr_type(pin_sensor, GPIO_INTR_NEGEDGE);
     gpio_set_pull_mode(pin_sensor, GPIO_PULLUP_ONLY);
-// táº¡o cac ham ngáº¯t tÆ°Æ¡ng á»©ng vá»›i cÃ¡c chÃ¢n
+// tao ham ngat tren cac chan tuong ung
     gpio_install_isr_service(ESP_INR_FLAG_DEFAULT);
     gpio_isr_handler_add(PUSH_BUTTON_PIN_1, button_isr_handler_1, NULL);
     gpio_isr_handler_add(PUSH_BUTTON_PIN_2, button_isr_handler_2, NULL);
@@ -367,7 +367,7 @@ void app_main()
     vTaskDelay(5000/portTICK_PERIOD_MS);
     rest_get();
 
-    // táº¡o cÃ¡c task
+    // tao cac task
     xTaskCreate(&DHT_reader_task, "DHT_reader_task", 2048, NULL, 10, NULL);
     xTaskCreate(interrupt_task_1, "interrupt_task_1", 4096, NULL, 12, &ISR_1);
     xTaskCreate(interrupt_task_2, "interrupt_task_2", 4096, NULL, 10, &ISR_2);

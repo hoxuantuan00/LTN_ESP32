@@ -64,7 +64,7 @@ char X_ACCESS_KEY[] = "$2b$10$O.WIHfTbkkgTb6IB9XKlFuL9CIYC5kcrnXnA8Hi299J1MMHSt1
 char data[200];
 char data_default[] = "{\"temparature\":\"%s\",\"humi\":\"%s\",\"detect\":\"%s\",\"device_1\":\"%s\",\"device_2\":\"%s\",\"device_3\": \"%s\"}";
 
-
+// tôi đang thay đổi code 
 
 esp_err_t client_event_get_handler(esp_http_client_event_handle_t evt)
 {
